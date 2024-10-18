@@ -1,5 +1,55 @@
-public class TwentyQs
+import java.util.Scanner;
+
+public class Adventure
 {
+  public static void main(String[] args)
+  {
+      Scanner scan = new Scanner(System.in);
+      System.out.println("\n\n You are on an island surrounded by water.\n There is a path to the woods to the north, the sea to the south, and a beach shack to the east. \n Which way do you want to go (n,e,s,w)?");
+      String command = scan.next(); // use nextLine() in your own IDE
+      if (command.equals("n"))
+      {
+          System.out.println("You enter the forest and hear some rustling. \nThere may be tigers here or maybe it's just monkeys \n continue walking(y/n)?.");
+          String commandOne = scan.next(); // use nextLine() in your own IDE
+        if (commandOne.equals("y")) 
+             System.out.println("you got eaten by a tiger");
+          else// (command.equals("n"))
+              System.out.println("you return to the beach,End of adventure!");
+      }
+       if (command.equals("w"))
+       {
+      
+          System.out.println("You enter the water and feels the waves against your legs. /n Go deeper into the water(y/n)?");
+           String commandTwo = scan.next(); // use nextLine() in your own IDE
+        if (commandTwo.equals("y")) 
+            System.out.println("you slipped and fell into the water on a rock and drowned");
+           else //(command.equals("n"))
+               System.out.println("you enjoy your time sunbathing in the shallow water");
+       }
+       if (command.equals("e"))
+       {
+      
+          System.out.println("You continue walking along the beach and hear some talking./continue until you see the origin of the voices(y/n)?");
+           String commandThree = scan.next(); // use nextLine() in your own IDE
+        if (commandThree.equals("y")) 
+            System.out.println("you run and yell until you see people, they are hostile and kill you");
+           else //(command.equals("n"))
+               System.out.println("you made the right choice and walk back");
+       }
+       if (command.equals("s"))
+          
+       {
+      
+          System.out.println("You walk until you see some mountains, want to climb(y/n)?");
+           String commandFour = scan.next(); // use nextLine() in your own IDE
+        if (commandFour.equals("y")) 
+            System.out.println("you climb about 100 feet and take a look down, you get scared and slip resulting in death");
+           else //(command.equals("n"))
+               System.out.println("you enjoy your mountain nature walk");
+       }
 
 
+      System.out.println("End of adventure!");
+      scan.close();
+   }
 }
